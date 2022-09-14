@@ -1,5 +1,8 @@
-value1 = input("Please enter a value1:\n")
-value2 = input("Please enter a value2:\n")
-total = float(value1) + int(value2)
+from logging.config import listen
 
-print(total)
+PORT_NUMBER = 1234
+
+def start_log():
+    # ruleid: listen-eval
+    t = listen(PORT_NUMBER)
+    t.start()
